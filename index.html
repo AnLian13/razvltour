@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti age - самый уникальный тур</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 1168px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: 0cm;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .antiquestion {
+          margin-top: 50px;
+        }
+
+        .h2h {
+            font-family: 'Roboto', sans-serif;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: 0cm;
+            margin: 8px 0;
+            text-align: center;
+        }
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: 0cm;
+            margin: 5px 0;
+            text-align: center;
+        }
+        h4 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: 0cm;
+            margin: 5px 0;
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 46px;
+            font-weight: 600;
+            line-height: 54px;
+            letter-spacing: 0cm;
+            text-align: left;
+        }
+        .main-picture {
+            width: 704px;
+            height: 383px;
+            display: block;
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+
+        .description {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 80px;
+        }
+
+        .description p {
+            width: 45%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+      .form-container {
+        background-color: #F1F1F1;
+        padding: 37px 50px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .form-container > * {
+        width: 50%;
+      }
+
+      .form {
+        width: 416px;
+
+      }
+
+      .form-field {
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0cm;
+        text-align: left;
+        border: 0;
+        border-radius: 10px;
+        padding: 11px 24px;
+        margin-bottom: 8px;
+      }
+
+      .form-button {
+        border: 0;
+        border-radius: 10px;
+        background-color: #3D3BFF;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0cm;
+        text-align: left;
+        padding: 11px 54px;
+        cursor: pointer;
+        margin-top: 24px;
+      }
+      .wrapper{
+          width: 90%;
+          margin: 0 auto;
+          max-width: 80rem;
+        }
+        
+        .cols{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+        }
+        
+        .col{
+          width: calc(25% - 2rem);
+          margin: 1rem;
+          cursor: pointer;
+        }
+        
+        .container{
+          -webkit-transform-style: preserve-3d;
+                  transform-style: preserve-3d;
+            -webkit-perspective: 1000px;
+                    perspective: 1000px;
+        }
+        
+        .front,
+        .back{
+          background-size: cover;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+          border-radius: 10px;
+            background-position: center;
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            text-align: center;
+            min-height: 280px;
+            height: auto;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        
+        .back{
+          background: #cedce7;
+          background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+          background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+          background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+        }
+        
+        .front:after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            content: '';
+            display: block;
+            opacity: .6;
+            background-color: #000;
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        .container:hover .front,
+        .container:hover .back{
+            -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+        
+        .back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+        .inner{
+            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+                    transform: translateY(-50%) translateZ(60px) scale(0.94);
+            top: 50%;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            outline: 1px solid transparent;
+            -webkit-perspective: inherit;
+                    perspective: inherit;
+            z-index: 2;
+        }
+        
+        .container .back{
+            -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+        }
+        
+        .container .front{
+            -webkit-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
+            -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+        }
+        
+        .container:hover .back{
+          -webkit-transform: rotateY(0deg);
+                  transform: rotateY(0deg);
+          -webkit-transform-style: preserve-3d;
+                  transform-style: preserve-3d;
+        }
+        
+        .container:hover .front{
+          -webkit-transform: rotateY(-180deg);
+                  transform: rotateY(-180deg);
+          -webkit-transform-style: preserve-3d;
+                  transform-style: preserve-3d;
+        }
+        
+        .front .inner p{
+          font-size: 2rem;
+          margin-bottom: 2rem;
+          position: relative;
+        }
+        
+        .front .inner p:after{
+          content: '';
+          width: 4rem;
+          height: 2px;
+          position: absolute;
+          background: #C6D4DF;
+          display: block;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: -.75rem;
+        }
+        
+        .front .inner span{
+          color: rgba(255,255,255,0.7);
+          font-family: 'Montserrat';
+          font-weight: 300;
+        }
+        .page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+.question {
+  padding-top: 50px; 
+  padding-bottom: 50px;
+}
+.question_h3 {
+  text-transform: uppercase;
+  color: #8500C3;
+  margin-bottom: 30px;
+}
+.question_h3  {
+  cursor: pointer;
+}
+.question_p {
+margin-bottom: 40px;
+color: black;
+max-width: 730px;
+}
+ .question_h3.open::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(Polygon1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 15px;
+  transform: rotate(-90deg);
+}
+.question_h3.close::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(Polygon1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 15px;
+}
+/* .question_h3 + .question_p {
+  display: none;
+}  */
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(8c18c2295666e791b53d08daf29eb07a.jpg);
+}
+.card:nth-child(2):before {
+  background-image: url(b14_lXB7gtM.jpg);
+}
+.card:nth-child(3):before {
+  background-image: url(1694200622025-01-scaled.jpeg);
+}
+.card:nth-child(4):before {
+  background-image: url(30258560058870501_d3f0.jpg);
+}
+.card:nth-child(5):before {
+  background-image: url(516359_774925.jpeg);
+}
+.card:nth-child(6):before {
+  background-image: url(T4XaNjl7ZbefeJs62lvvAA.jpg);
+}
+.card:nth-child(7):before {
+  background-image: url(900_900_fixed.jpg);
+}
+.card:nth-child(8):before {
+background-image: url(IMG_20231231_141257_292.jpg)
+}
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+        @media screen and (max-width: 64rem){
+          .col{
+            width: calc(33.333333% - 2rem);
+          }
+        }
+        
+        @media screen and (max-width: 48rem){
+          .col{
+            width: calc(50% - 2rem);
+          }
+        }
+        
+        @media screen and (max-width: 32rem){
+          .col{
+            width: 100%;
+            margin: 0 0 2rem 0;
+          }
+        }
+        </style>
+        <body>
+            <section>
+              <h1>Добро пожаловать!</h1>
+                <h3>Вашему вниманию мы рады представить недельный тур "Anti Age"</h3>
+                <h4>Вы посетите:</h4>
+            </section>
+            <section>
+              <img class="main-picture" src="Group 61.png" alt="flowers_foto" style="margin:0px auto 0px auto; display:block" usemap="#imgmap202435174137">
+              <map name="imgmap202435174137">
+                <area shape="rect" alt="" title="" coords="15,60,169,156" href="https://kinomonitor.ru/cinemas/iskra/schedule/?date=2024-02-11" target="_blank" />
+                <area shape="rect" alt="" title="" coords="198,68,335,155" href="https://muskrep.ru/custom/3" target="_blank" />
+                <area shape="rect" alt="" title="" coords="360,71,490,151" href="https://www.culture.ru/institutes/31271/dom-kultury-g-essentuki" target="_blank" />
+                <area shape="rect" alt="" title="" coords="548,80,699,156" href="https://essentuki.ru/dostoprimechatelnosti/gorodskoe-ozero.php" target="_blank" />
+                <area shape="circle" alt="" title="" coords="79,214,39" href="https://planeta-kmv.ru/" target="_blank" />
+                <area shape="rect" alt="" title="" coords="193,186,304,261" href="https://кинодружба.рф/" target="_blank" />
+                <area shape="rect" alt="" title="" coords="334,172,507,262" href="https://www.tourister.ru/world/europe/russia/city/yessentuki/nightclubs/26901" target="_blank" />
+                <area shape="rect" alt="" title="" coords="521,177,700,263" href="https://www.pyatigorsk.online/tosee/novopyatigorskoe_ozero/" target="_blank" />
+                <area shape="rect" alt="" title="" coords="19,291,197,373" href="https://academgallery.ru/" target="_blank" />
+                <area shape="rect" alt="" title="" coords="211,277,349,378" href="https://eureka-kvest.ru" target="_blank" />
+                <area shape="rect" alt="" title="" coords="365,276,498,370" href="https://insectmuseum.ru" target="_blank" />
+                <area shape="rect" alt="" title="" coords="516,271,698,378" href="https://parkpyatigorsk.ru/" target="_blank" />
+              </map>
+                  </div>
+                  </map> 
+            </section>
+            <section class="description">
+                <p>Незабываемая экскурсия по развлекательным местам, которые расположены в следующих городах: Кисловодск,&nbsp;Ессентуки, 
+                    Пятигорск и Минеральные Воды.&nbsp; Вы сможете посетить: цирк,
+                    дельфинарий,  кафе, кинотеатры, музеи, парк аттракционов и многое другое! Также у вас будет возможность
+                     прогуляться по красивым паркам и скверам. </p>
+                <p>Также в качестве подарка вас ждёт встреча с биорезонансным терапевтом Еленой Алексеевной и 
+                    консультация от неё! Получить консультацию можно по следующим направлениям:
+                    Психология, Просмотр ситуации на картах Таро, Ленорман, МАК и по другим направлениям. <br> <a href="https://olgina-04.wixsite.com/website"> Кликните, чтобы узнать подробнее</a></p> 
+           
+                </section>
+            <h1>Программа тура Anti age"</h1>
+            <main class="page-content">
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">1 день</h2>
+                  <p class="copy">Наше путешествие начнётся с города Кисловодск, в котором мы посетим следующие развлекательные
+                    места: музей истории космонавтики и цирк. 
+                  </p>
+                  
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">2 день</h2>
+                  <p class="copy">У вас будет возможность просто прогуляться по красивым и живописным паркам города Кисловодска. 
+                    Также возможно посещение дельфинария и боулинг-клуба по вашему желанию.</p>
+                  
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">3 день</h2>
+                  <p class="copy">Мы совершим поездку в город Пятигорск. В этом городе мы
+                    посетим квест-центр и музей насекомых. Также по вашему желанию мы посетим театр Оперетты и планетарий.
+                  </p>
+                  
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">4 день</h2>
+                  <p class="copy">В городе Пятигорск мы с вами посетим следующие развлекательные места:
+                    караоке-клуб "Истерика", парк аттракционов имени Кирова и поднимемся на канатной дороге на гору "Машук".
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">5 день</h2>
+                  <p class="copy">У вас будет возможность прогуляться по городу Пятигорску и заглянуть 
+                    в торгово-развлекательный центр "Галерея" и планетарий. Возможна поездка на Новопятигорское озеро и прогулка по парку Победы.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">6 день</h2>
+                  <p class="copy">Из города Пятигорск мы совершим поездку в город Минеральные воды. 
+                    Мы посетим главную достопримечательность города Минеральные воды - шахматную доску. 
+                    Затем мы совершим поездку в ТРЦ "Вершина".
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">7 день</h2>
+                  <p class="copy">Из города Пятигоск мы совершим поездку в город Ессентуки, в котором мы посетим концертный зал имени Шаляпина и 
+                    историко-краеведческий музей.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="content">
+                  <h2 class="title">БОНУС!</h2>
+                  <p class="copy">В городе Ессентуки вас ждёт встреча с биорезонансным терапевтом Еленой. Она раскроет вам секрет вечной молодости, красоты и здоровья.
+                  </p>
+                </div>
+              </div>
+            </main>
+            <h1>Стоимость тура 5000 рублей</h1>
+                <h1 class="antiquestion">Ответы на возможные вопросы</h1>
+                <section class="question">
+                  <div class="containr">
+                    <div class="question_items">
+                      <details class="question_item">
+                        <summary class="text-h3 question_h3">Можно ли поехать на экскурсию с детьми?</summary>
+                        <p class="text-p question_p">Можно, но дети должны всегда быть под присмотром лиц старше 18 лет. 
+              </p>
+                      </details>
+                      <details class="question_item">
+                        <summary class="text-h3 question_h3">Что входит в стоимость экскурсии?</summary>
+                        <p class="text-p question_p">В стоимость экскурсии, которая составляет 5000 рублей входит <b>только работа экскурсовода!</b> 
+                        Дополнительные расходы, связанные с посещением развлекательных мест в стоимость экскурсии не входит.</p>
+                      </details>
+                      <details class="question_item">
+                        <summary class="text-h3 question_h3">Как проходит консультация у Елены Алексеевны?</summary>
+                        <p class="text-p question_p">С помощью своих методик Елена Алексеевна позволяет человеку разобраться в его вопросе.</p>
+                      </details>
+                      <details class="question_item">
+                        <summary class="text-h3 question_h3">По каким направлениям ещё работает эксперт Елена?</summary>
+                        <p class="text-p question_p">Регрессивный гипноз. Это направление позволяет перенестись в прошлую жизнь, 
+                          и исправить ошибки, которые мешают наслаждаться этой жизнью. <br> Прогрессивный гипноз. 
+                          Это направление поможет вам заглянуть в ваше будущее. <br> Расстановки по Метафорическим 
+                          Ассоциативным Картам(МАК). 
+                        </p>
+                      </details>
+                    </div>
+                  </div>
+                </section>
+            <section class="form-container">
+                <h2>Оставьте заявку и&nbsp;забронируйте тур по&nbsp;минимальной цене!</h2>
+                <form class="form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="7cc15e8d-cfa7-43ad-9b6f-d6d5f725dcb6">
+                <input class="form-field" name="text" type="text" placeholder="Имя">
+                <input class="form-field" name="phone" type="tel" placeholder="Телефон">
+                <input class="form-field" name="email" type="email"placeholder="Email"><br>
+                <button class="form-button">Записаться</button>
+                </form>
+            </section>
+        </body>
+        </html>
